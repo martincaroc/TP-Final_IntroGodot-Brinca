@@ -10,7 +10,8 @@ config_version=5
 
 [application]
 
-config/name="MiPrimerProyecto"
+config/name="MyFirstPlatformer"
+run/main_scene="res://Scenes/Main/level.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
 
