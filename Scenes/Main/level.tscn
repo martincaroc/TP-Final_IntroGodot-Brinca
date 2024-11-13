@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://bpp4fy7fohjrg"]
+[gd_scene load_steps=2 format=3 uid="uid://bpp4fy7fohjrg"]
+
+[ext_resource type="PackedScene" uid="uid://dsvr22dvmbm46" path="res://Scenes/Main/player.tscn" id="1_gv45v"]
 
 [node name="Level" type="Node2D"]
 
@@ -8,3 +10,6 @@
 position = Vector2(7, -364)
 scale = Vector2(1.45652, 1.56377)
 polygon = PackedVector2Array(-4, 543, 216, 543, 241, 490, 358, 489, 418, 537, 634, 403, 850, 403, 850, 646, -4, 647)
+
+[node name="Player" parent="." instance=ExtResource("1_gv45v")]
+position = Vector2(67, 422)
