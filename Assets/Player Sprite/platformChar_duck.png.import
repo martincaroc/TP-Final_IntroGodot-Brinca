@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cpcplulne1usx"
-path="res://.godot/imported/platformChar_walk1.png-c40264c67378f19454ebe2193f2c942e.ctex"
+uid="uid://ce15m2t8d54p"
+path="res://.godot/imported/platformChar_duck.png-0cbf18046078bf750676a96ea724242b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Player/platformChar_walk1.png"
-dest_files=["res://.godot/imported/platformChar_walk1.png-c40264c67378f19454ebe2193f2c942e.ctex"]
+source_file="res://Assets/Player Sprite/platformChar_duck.png"
+dest_files=["res://.godot/imported/platformChar_duck.png-0cbf18046078bf750676a96ea724242b.ctex"]
 
 [params]
 
