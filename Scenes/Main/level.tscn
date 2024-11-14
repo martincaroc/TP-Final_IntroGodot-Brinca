@@ -13,3 +13,6 @@ polygon = PackedVector2Array(-4, 543, 216, 543, 241, 490, 358, 489, 418, 537, 57
 
 [node name="Player" parent="." instance=ExtResource("1_gv45v")]
 position = Vector2(67, 422)
+
+[node name="Camera2D2" type="Camera2D" parent="Player"]
+position_smoothing_enabled = true
