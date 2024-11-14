@@ -53,3 +53,5 @@ animation = &"walk"
 autoplay = "idle"
 frame = 1
 frame_progress = 0.215595
+
+[node name="Camera2D" type="Camera2D" parent="."]
