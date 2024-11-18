@@ -40,12 +40,24 @@ func _physics_process(delta):
 	else:
 		$AnimatedSprite2D.play("idle")
 
-
-func _on_area_2d_area_entered(_area):
-	if position.y > _area.position.y:
-		print("perdi?")
-		get_tree().reload_current_scene()
+	#Enemy Collision
+func collide_with_enemy(enemy):
+	if position.y > enemy.position.y:
+		#print("perdi")
+		lose()
 	else:
-		print("gane?")
-		_area.queue_free()
+		#print("gane")
+		enemy.queue_free()
 		velocity.y = JUMP_VELOCITY
+
+	#Lose
+func lose():
+	get_tree().reload_current_scene()
+
+	#Player Collision
+func _on_area_2d_area_entered(_area):
+	if _area.is_in_group("enemies"):
+		collide_with_enemy(_area)	
+	elif _area.is_in_group("deathzone"):
+		lose()
+		
