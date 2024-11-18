@@ -49,12 +49,7 @@ position = Vector2(0, -64)
 sprite_frames = SubResource("SpriteFrames_k4fns")
 animation = &"idle"
 autoplay = "idle"
-<<<<<<< Updated upstream
 frame_progress = 0.752103
-=======
-frame_progress = 0.429893
-flip_h = true
->>>>>>> Stashed changes
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.25, -24.5)
