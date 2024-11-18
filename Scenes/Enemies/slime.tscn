@@ -1,0 +1,54 @@
+[gd_scene load_steps=7 format=3 uid="uid://27ijup8pduat"]
+
+[ext_resource type="Texture2D" uid="uid://bo64rryceef4b" path="res://Assets/Enemy Sprites/slimeBlue_dead.png" id="1_g2wy8"]
+[ext_resource type="Texture2D" uid="uid://cbe1qtg1fylys" path="res://Assets/Enemy Sprites/slimeBlue_hit.png" id="2_jjxlj"]
+[ext_resource type="Texture2D" uid="uid://n5cve1o52dl" path="res://Assets/Enemy Sprites/slimeBlue.png" id="3_0g7pj"]
+[ext_resource type="Texture2D" uid="uid://ejph404y4jva" path="res://Assets/Enemy Sprites/slimeBlue_move.png" id="4_mmojf"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k4fns"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_g2wy8")
+}],
+"loop": true,
+"name": &"dead",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_jjxlj")
+}],
+"loop": true,
+"name": &"hit",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_0g7pj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_mmojf")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 4.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tgn0o"]
+size = Vector2(84.5, 47)
+
+[node name="Slime" type="Area2D"]
+collision_layer = 2
+collision_mask = 0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -64)
+sprite_frames = SubResource("SpriteFrames_k4fns")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.795205
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.25, -24.5)
+shape = SubResource("RectangleShape2D_tgn0o")

@@ -1,13 +1,14 @@
 extends CharacterBody2D
 
 
-const SPEED = 400.0
-const JUMP_VELOCITY = -700.0
+const SPEED = 300.0
+const JUMP_VELOCITY = -600.0
 
 
 func _physics_process(delta):
 	# Add the gravity.
-	var gravity = get_gravity() *1.6
+	var gravity = get_gravity() * 1.4
+
 	if not is_on_floor():
 		velocity += gravity * delta
 
@@ -38,3 +39,13 @@ func _physics_process(delta):
 		$AnimatedSprite2D.play("walk")
 	else:
 		$AnimatedSprite2D.play("idle")
+
+
+func _on_area_2d_area_entered(_area):
+	if position.y > _area.position.y:
+		print("perdi?")
+		get_tree().reload_current_scene()
+	else:
+		print("gane?")
+		_area.queue_free()
+		velocity.y = JUMP_VELOCITY

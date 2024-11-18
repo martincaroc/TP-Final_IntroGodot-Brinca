@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://bpp4fy7fohjrg"]
+[gd_scene load_steps=7 format=4 uid="uid://bpp4fy7fohjrg"]
 
 [ext_resource type="Texture2D" uid="uid://cvbmv1cu15ouu" path="res://Assets/backgrounds/blue_shroom.png" id="1_0kmm0"]
 [ext_resource type="Texture2D" uid="uid://cipomwjuw5slb" path="res://Assets/tiles/platformPack_tilesheet.png" id="1_c5d3a"]
 [ext_resource type="PackedScene" uid="uid://dsvr22dvmbm46" path="res://Scenes/Main/player.tscn" id="1_gv45v"]
+[ext_resource type="PackedScene" uid="uid://27ijup8pduat" path="res://Scenes/Enemies/slime.tscn" id="4_53hur"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tgbvb"]
 texture = ExtResource("1_c5d3a")
@@ -43,3 +44,8 @@ position = Vector2(39, -7)
 
 [node name="Camera2D2" type="Camera2D" parent="Player"]
 position_smoothing_enabled = true
+
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="Slime" parent="Enemies" instance=ExtResource("4_53hur")]
+position = Vector2(348, -129)
