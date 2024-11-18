@@ -32,6 +32,7 @@ scroll_offset = Vector2(-514, -341)
 repeat_size = Vector2(1024, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="Parallax2D"]
+position = Vector2(2, 0)
 texture = ExtResource("1_0kmm0")
 centered = false
 
@@ -48,4 +49,4 @@ position_smoothing_enabled = true
 [node name="Enemies" type="Node2D" parent="."]
 
 [node name="Slime" parent="Enemies" instance=ExtResource("4_53hur")]
-position = Vector2(348, -129)
+position = Vector2(277, -128)
