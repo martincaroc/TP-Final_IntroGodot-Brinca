@@ -4,6 +4,8 @@ extends CharacterBody2D
 const SPEED = 300.0
 const JUMP_VELOCITY = -600.0
 
+var coins = 0
+
 func _physics_process(delta):
 	# Add the gravity.
 	var gravity = get_gravity() * 1.4
@@ -48,7 +50,10 @@ func _on_area_2d_area_entered(area):
 	if area.is_in_group("enemies"):
 		collide_with_enemy(area)	
 	elif area.is_in_group("deathzone") or area.is_in_group("projectiles"):
-		lose()		
+		lose()
+	elif area.is_in_group("coins"):
+		coins += 1
+		area.queue_free()
 
 #Enemy Collision
 #WIP Fix Player collition with enemies, can tackle enemies
