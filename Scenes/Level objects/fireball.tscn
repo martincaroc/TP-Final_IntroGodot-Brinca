@@ -7,7 +7,6 @@
 radius = 22.2036
 
 [node name="fireball" type="Area2D" groups=["projectiles"]]
-visible = false
 collision_layer = 2
 collision_mask = 0
 script = ExtResource("1_bhim3")
