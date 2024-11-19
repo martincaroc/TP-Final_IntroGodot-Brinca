@@ -47,7 +47,7 @@ script = ExtResource("1_ooj7t")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -64)
 sprite_frames = SubResource("SpriteFrames_k4fns")
-animation = &"death"
+animation = &"idle"
 autoplay = "idle"
 flip_h = true
 
