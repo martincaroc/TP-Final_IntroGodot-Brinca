@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cipomwjuw5slb"
-path="res://.godot/imported/platformPack_tilesheet.png-09d0ac097911d13094a0fde99e061018.ctex"
+uid="uid://dpdehv83oxmdc"
+path="res://.godot/imported/coinSilver.png-95e68658d4196757924a56b2d6cacdd1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Tiles/platformPack_tilesheet.png"
-dest_files=["res://.godot/imported/platformPack_tilesheet.png-09d0ac097911d13094a0fde99e061018.ctex"]
+source_file="res://Assets/Level Objects/coinSilver.png"
+dest_files=["res://.godot/imported/coinSilver.png-95e68658d4196757924a56b2d6cacdd1.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cipomwjuw5slb"
-path="res://.godot/imported/platformPack_tilesheet.png-09d0ac097911d13094a0fde99e061018.ctex"
+uid="uid://3b87rd41us5b"
+path="res://.godot/imported/gemBlue.png-1baa8cba871b396df0551851d7474d7d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Tiles/platformPack_tilesheet.png"
-dest_files=["res://.godot/imported/platformPack_tilesheet.png-09d0ac097911d13094a0fde99e061018.ctex"]
+source_file="res://Assets/Level Objects/gemBlue.png"
+dest_files=["res://.godot/imported/gemBlue.png-1baa8cba871b396df0551851d7474d7d.ctex"]
 
 [params]
 

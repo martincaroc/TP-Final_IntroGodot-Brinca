@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cipomwjuw5slb"
-path="res://.godot/imported/platformPack_tilesheet.png-09d0ac097911d13094a0fde99e061018.ctex"
+uid="uid://dn5eyiqnlc7l1"
+path="res://.godot/imported/star.png-65303f5ac61b7e33b22f407da732fc90.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Tiles/platformPack_tilesheet.png"
-dest_files=["res://.godot/imported/platformPack_tilesheet.png-09d0ac097911d13094a0fde99e061018.ctex"]
+source_file="res://Assets/Level Objects/star.png"
+dest_files=["res://.godot/imported/star.png-65303f5ac61b7e33b22f407da732fc90.ctex"]
 
 [params]
 
