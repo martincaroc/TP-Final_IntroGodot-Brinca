@@ -1,0 +1,51 @@
+[gd_scene load_steps=7 format=3 uid="uid://dcedgjl3m330i"]
+
+[ext_resource type="Script" path="res://Scenes/Enemies/snail.gd" id="1_nyxth"]
+[ext_resource type="Texture2D" uid="uid://f1n7h383sv14" path="res://Assets/Enemy Sprites/snail_shell.png" id="1_yltxh"]
+[ext_resource type="Texture2D" uid="uid://dve1l2n3abioc" path="res://Assets/Enemy Sprites/snail.png" id="2_o2ftv"]
+[ext_resource type="Texture2D" uid="uid://chne1255p2xoi" path="res://Assets/Enemy Sprites/snail_move.png" id="3_gfmdf"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nwjs3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_yltxh")
+}],
+"loop": true,
+"name": &"death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_o2ftv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_gfmdf")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_thsji"]
+size = Vector2(96, 51)
+
+[node name="snail" type="CharacterBody2D" groups=["enemies"]]
+collision_layer = 2
+collision_mask = 4
+script = ExtResource("1_nyxth")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -64)
+sprite_frames = SubResource("SpriteFrames_nwjs3")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.745091
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, -25.5)
+shape = SubResource("RectangleShape2D_thsji")
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="."]
+position = Vector2(0, -43)
+scale = Vector2(6.3, 5.9)

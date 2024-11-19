@@ -59,4 +59,8 @@ shape = SubResource("RectangleShape2D_tgn0o")
 [node name="Timer" type="Timer" parent="."]
 autostart = true
 
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="."]
+position = Vector2(0, -32)
+scale = Vector2(5.2, 4)
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
