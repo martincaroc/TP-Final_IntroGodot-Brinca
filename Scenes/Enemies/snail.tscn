@@ -40,7 +40,7 @@ position = Vector2(0, -64)
 sprite_frames = SubResource("SpriteFrames_nwjs3")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.745091
+frame_progress = 0.45191
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, -25.5)

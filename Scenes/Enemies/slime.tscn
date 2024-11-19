@@ -13,7 +13,7 @@ animations = [{
 "texture": ExtResource("1_g2wy8")
 }],
 "loop": true,
-"name": &"dead",
+"name": &"death",
 "speed": 5.0
 }, {
 "frames": [{
@@ -47,9 +47,8 @@ script = ExtResource("1_ooj7t")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -64)
 sprite_frames = SubResource("SpriteFrames_k4fns")
-animation = &"idle"
+animation = &"death"
 autoplay = "idle"
-frame_progress = 0.752103
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
