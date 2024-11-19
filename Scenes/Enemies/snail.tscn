@@ -38,12 +38,12 @@ script = ExtResource("1_nyxth")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -64)
 sprite_frames = SubResource("SpriteFrames_nwjs3")
-animation = &"death"
+animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.129066
+frame_progress = 0.45191
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, -25.5)
+position = Vector2(1, -29)
 shape = SubResource("RectangleShape2D_thsji")
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="."]

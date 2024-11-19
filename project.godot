@@ -18,6 +18,11 @@ config/icon="res://icon.svg"
 [global_group]
 
 enemies=""
+projectiles=""
+
+[layer_names]
+
+2d_physics/layer_2="Interactable"
 
 [physics]
 

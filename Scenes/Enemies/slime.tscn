@@ -47,12 +47,12 @@ script = ExtResource("1_ooj7t")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -64)
 sprite_frames = SubResource("SpriteFrames_k4fns")
-animation = &"idle"
+animation = &"death"
 autoplay = "idle"
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.25, -24.5)
+position = Vector2(0.25, -29)
 shape = SubResource("RectangleShape2D_tgn0o")
 
 [node name="Timer" type="Timer" parent="."]
