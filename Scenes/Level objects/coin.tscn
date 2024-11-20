@@ -1,15 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://cxcnhh3l07kxf"]
+[gd_scene load_steps=4 format=3 uid="uid://btj517sp02un4"]
 
+[ext_resource type="Script" path="res://Scenes/Level objects/coin.gd" id="1_hjee6"]
 [ext_resource type="Texture2D" uid="uid://n3xt2bhvulth" path="res://Assets/Level Objects/coinGold.png" id="1_pvmav"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5csty"]
-radius = 32.6497
+radius = 23.1948
 
-[node name="goldCoin" type="Area2D" groups=["coins"]]
+[node name="coin" type="Area2D" groups=["coins"]]
 collision_layer = 2
 collision_mask = 0
+script = ExtResource("1_hjee6")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.7, 0.7)
 texture = ExtResource("1_pvmav")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

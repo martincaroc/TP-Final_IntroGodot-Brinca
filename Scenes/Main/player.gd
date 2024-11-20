@@ -5,6 +5,7 @@ const SPEED = 300.0
 const JUMP_VELOCITY = -600.0
 
 var coins = 0
+var lives = 3
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -53,6 +54,9 @@ func _on_area_2d_area_entered(area):
 		lose()
 	elif area.is_in_group("coins"):
 		coins += 1
+		area.queue_free()
+	elif area.is_in_group("one_ups"):
+		lives += 1
 		area.queue_free()
 
 #Enemy Collision
