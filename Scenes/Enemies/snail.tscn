@@ -28,7 +28,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_thsji"]
-size = Vector2(96, 51)
+size = Vector2(102, 73)
 
 [node name="snail" type="CharacterBody2D" groups=["enemies"]]
 collision_layer = 2
@@ -44,7 +44,7 @@ frame_progress = 0.45191
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, -29)
+position = Vector2(0, -38.5)
 shape = SubResource("RectangleShape2D_thsji")
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="."]

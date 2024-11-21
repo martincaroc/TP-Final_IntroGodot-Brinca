@@ -40,26 +40,28 @@ animations = [{
 size = Vector2(84.5, 47)
 
 [node name="Slime" type="Area2D" groups=["enemies"]]
+position = Vector2(-1, -8)
+scale = Vector2(0.7, 0.7)
 collision_layer = 2
 collision_mask = 0
 script = ExtResource("1_ooj7t")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, -64)
+position = Vector2(2, -56)
 sprite_frames = SubResource("SpriteFrames_k4fns")
 animation = &"death"
 autoplay = "idle"
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.25, -29)
+position = Vector2(1, -16)
 shape = SubResource("RectangleShape2D_tgn0o")
 
 [node name="Timer" type="Timer" parent="."]
 autostart = true
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="."]
-position = Vector2(0, -32)
+position = Vector2(1, -32)
 scale = Vector2(5.2, 4)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

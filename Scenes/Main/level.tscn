@@ -47,7 +47,7 @@ tile_map_data = PackedByteArray("AAAAAAAAAAACAAEAAAAAAAEAAAADAAEAAAAAAAIAAAADAAE
 tile_set = SubResource("TileSet_0eb30")
 
 [node name="Player" parent="." instance=ExtResource("1_gv45v")]
-position = Vector2(-193, 0)
+position = Vector2(-356, -3)
 
 [node name="Camera2D2" type="Camera2D" parent="Player"]
 position_smoothing_enabled = true
@@ -77,16 +77,16 @@ position = Vector2(539, -19)
 [node name="Enemies" type="Node2D" parent="."]
 
 [node name="Slime" parent="Enemies" instance=ExtResource("4_53hur")]
-position = Vector2(277, -121)
+position = Vector2(293, -136)
 
 [node name="Slime3" parent="Enemies" instance=ExtResource("4_53hur")]
-position = Vector2(1094, -703)
+position = Vector2(1087, -713)
 
 [node name="snail" parent="Enemies" instance=ExtResource("5_ksnvf")]
 position = Vector2(177, -65)
 
 [node name="snail2" parent="Enemies" instance=ExtResource("5_ksnvf")]
-position = Vector2(1284, -4)
+position = Vector2(1284, -1)
 
 [node name="barnacle" parent="Enemies" instance=ExtResource("6_hphp8")]
 position = Vector2(-96, 128)
