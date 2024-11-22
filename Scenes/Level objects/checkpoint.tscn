@@ -1,0 +1,47 @@
+[gd_scene load_steps=7 format=3 uid="uid://xcm2npjaxnpv"]
+
+[ext_resource type="Script" path="res://Scenes/Level objects/checkpoint.gd" id="1_0b58a"]
+[ext_resource type="Texture2D" uid="uid://dago3ee3hw7mi" path="res://Assets/Level Objects/flagYellow1.png" id="1_4dt8n"]
+[ext_resource type="Texture2D" uid="uid://um2p65mo8el7" path="res://Assets/Level Objects/flagYellow2.png" id="2_yu7og"]
+[ext_resource type="Texture2D" uid="uid://xjvow2mfjvdo" path="res://Assets/Level Objects/flagYellow_down.png" id="3_s6vre"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_j86j6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_4dt8n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_yu7og")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_s6vre")
+}],
+"loop": true,
+"name": &"taken",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v1fy7"]
+size = Vector2(148, 148)
+
+[node name="Checkpoint" type="Area2D" groups=["checkpoints"]]
+scale = Vector2(0.5, 0.5)
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_0b58a")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(56, -64)
+sprite_frames = SubResource("SpriteFrames_j86j6")
+autoplay = "default"
+frame_progress = 0.994982
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(42, -74)
+shape = SubResource("RectangleShape2D_v1fy7")

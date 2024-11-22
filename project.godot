@@ -23,6 +23,7 @@ window/stretch/mode="canvas_items"
 
 enemies=""
 projectiles=""
+checkpoints=""
 
 [layer_names]
 

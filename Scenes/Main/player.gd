@@ -6,6 +6,10 @@ const JUMP_VELOCITY = -600.0
 
 var coins = 0
 var lives = 3
+var last_checkpoint_position = Vector2.ZERO
+
+func _ready():
+	last_checkpoint_position = position
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -44,9 +48,14 @@ func _physics_process(delta):
 
 #Lose
 func lose():
-	get_tree().reload_current_scene()
+	lives -= 1
+	if lives > 0:
+		position = last_checkpoint_position
+	else:
+		get_tree().reload_current_scene()
+	
 
-#Player Collision with enemies
+#Player Collision with other objects
 func _on_area_2d_area_entered(area):
 	if area.is_in_group("enemies"):
 		collide_with_enemy(area)	
@@ -58,11 +67,10 @@ func _on_area_2d_area_entered(area):
 	elif area.is_in_group("one_ups"):
 		lives += 1
 		area.queue_free()
+	elif area.is_in_group("checkpoints"):
+		last_checkpoint_position = area.position
+		area.take()
 
-#Enemy Collision
-#WIP Fix Player collition with enemies, can tackle enemies
-#AND kill 'em, correct behaviour if I touch an enemy horizontal
-#He can kill me
 func collide_with_enemy(enemy):
 	if position.y > enemy.position.y:
 		#print("perdi")

@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=4 uid="uid://bpp4fy7fohjrg"]
+[gd_scene load_steps=13 format=4 uid="uid://bpp4fy7fohjrg"]
 
 [ext_resource type="Texture2D" uid="uid://cvbmv1cu15ouu" path="res://Assets/backgrounds/blue_shroom.png" id="1_0kmm0"]
 [ext_resource type="Texture2D" uid="uid://cipomwjuw5slb" path="res://Assets/tiles/platformPack_tilesheet.png" id="1_c5d3a"]
 [ext_resource type="PackedScene" uid="uid://dsvr22dvmbm46" path="res://Scenes/Main/player.tscn" id="1_gv45v"]
 [ext_resource type="PackedScene" uid="uid://27ijup8pduat" path="res://Scenes/Enemies/slime.tscn" id="4_53hur"]
 [ext_resource type="PackedScene" uid="uid://btj517sp02un4" path="res://Scenes/Level objects/coin.tscn" id="4_e0imb"]
+[ext_resource type="PackedScene" uid="uid://xcm2npjaxnpv" path="res://Scenes/Level objects/checkpoint.tscn" id="5_0278b"]
 [ext_resource type="PackedScene" uid="uid://bqbuyl0iut3cu" path="res://Scenes/Level objects/deathzone.tscn" id="5_i1are"]
 [ext_resource type="PackedScene" uid="uid://dcedgjl3m330i" path="res://Scenes/Enemies/snail.tscn" id="5_ksnvf"]
 [ext_resource type="PackedScene" uid="uid://cdbd4ss7u3w44" path="res://Scenes/Level objects/one_up.tscn" id="5_w4l8e"]
@@ -47,7 +48,7 @@ tile_map_data = PackedByteArray("AAAAAAAAAAACAAEAAAAAAAEAAAADAAEAAAAAAAIAAAADAAE
 tile_set = SubResource("TileSet_0eb30")
 
 [node name="Player" parent="." instance=ExtResource("1_gv45v")]
-position = Vector2(-356, -3)
+position = Vector2(1085, 3)
 
 [node name="Camera2D2" type="Camera2D" parent="Player"]
 position_smoothing_enabled = true
@@ -67,7 +68,15 @@ position = Vector2(1446, -424)
 position = Vector2(1758, -746)
 
 [node name="goldCoin5" parent="Coins" instance=ExtResource("4_e0imb")]
-position = Vector2(925, -744)
+position = Vector2(1276, -744)
+
+[node name="Checkpoints" type="Node2D" parent="."]
+
+[node name="Checkpoint" parent="Checkpoints" instance=ExtResource("5_0278b")]
+position = Vector2(910, 0)
+
+[node name="Checkpoint2" parent="Checkpoints" instance=ExtResource("5_0278b")]
+position = Vector2(913, -704)
 
 [node name="OneUps" type="Node2D" parent="."]
 
