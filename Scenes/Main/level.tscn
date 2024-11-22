@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://bpp4fy7fohjrg"]
+[gd_scene load_steps=14 format=4 uid="uid://bpp4fy7fohjrg"]
 
 [ext_resource type="Texture2D" uid="uid://cvbmv1cu15ouu" path="res://Assets/backgrounds/blue_shroom.png" id="1_0kmm0"]
 [ext_resource type="Texture2D" uid="uid://cipomwjuw5slb" path="res://Assets/tiles/platformPack_tilesheet.png" id="1_c5d3a"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://dcedgjl3m330i" path="res://Scenes/Enemies/snail.tscn" id="5_ksnvf"]
 [ext_resource type="PackedScene" uid="uid://cdbd4ss7u3w44" path="res://Scenes/Level objects/one_up.tscn" id="5_w4l8e"]
 [ext_resource type="PackedScene" uid="uid://r3pmgjuleiv1" path="res://Scenes/Enemies/barnacle.tscn" id="6_hphp8"]
+[ext_resource type="PackedScene" uid="uid://g7t7bmgytfky" path="res://Scenes/Main/hud.tscn" id="11_tnhib"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tgbvb"]
 texture = ExtResource("1_c5d3a")
@@ -48,7 +49,7 @@ tile_map_data = PackedByteArray("AAAAAAAAAAACAAEAAAAAAAEAAAADAAEAAAAAAAIAAAADAAE
 tile_set = SubResource("TileSet_0eb30")
 
 [node name="Player" parent="." instance=ExtResource("1_gv45v")]
-position = Vector2(1085, 3)
+position = Vector2(-371, 3)
 
 [node name="Camera2D2" type="Camera2D" parent="Player"]
 position_smoothing_enabled = true
@@ -116,3 +117,5 @@ scale = Vector2(0.9, 0.9)
 
 [node name="Deathzone" parent="." instance=ExtResource("5_i1are")]
 position = Vector2(685, 192)
+
+[node name="Hud" parent="." instance=ExtResource("11_tnhib")]
