@@ -1,6 +1,5 @@
 extends CharacterBody2D
 
-
 const SPEED = 300.0
 const JUMP_VELOCITY = -600.0
 
@@ -8,6 +7,7 @@ var last_checkpoint_position = Vector2.ZERO
 
 func _ready():
 	last_checkpoint_position = position
+
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -47,14 +47,17 @@ func _physics_process(delta):
 #Lose
 func lose():
 	GameManager.lives -= 1
+	GameManager.lives_changed.emit()
+
 	if GameManager.lives > 0:
 		position = last_checkpoint_position
 	else:
 		get_tree().reload_current_scene()
 		GameManager.lives = 3
+		GameManager.lives_changed.emit()
 		GameManager.coins = 0
+		GameManager.coins_changed.emit()
 	
-
 #Player Collision with other objects
 func _on_area_2d_area_entered(area):
 	if area.is_in_group("enemies"):
@@ -62,12 +65,17 @@ func _on_area_2d_area_entered(area):
 	elif area.is_in_group("deathzone") or area.is_in_group("projectiles"):
 		lose()
 	elif area.is_in_group("coins"):
+		#Handle coins grabbed
 		GameManager.coins += 1
+		GameManager.coins_changed.emit()
 		area.queue_free()
 	elif area.is_in_group("one_ups"):
+		#Handle lives grabbed
 		GameManager.lives += 1
+		GameManager.coins_changed.emit()
 		area.queue_free()
 	elif area.is_in_group("checkpoints"):
+		#Handle checkpoints reached
 		last_checkpoint_position = area.position
 		area.take()
 

@@ -1,5 +1,8 @@
 extends Node
 
+signal coins_changed()
+signal lives_changed()
+
 var lives = 3
 var coins = 0
 
