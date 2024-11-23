@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cow2xh57v4ln7"
-path="res://.godot/imported/colored_land.png-0e484ce2e498e19b1d0bc3c585eea1ca.ctex"
+path="res://.godot/imported/colored_land.png-94d11f13dc376daf4e8f3772723ef1d8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/backgrounds/colored_land.png"
-dest_files=["res://.godot/imported/colored_land.png-0e484ce2e498e19b1d0bc3c585eea1ca.ctex"]
+source_file="res://Assets/Backgrounds/colored_land.png"
+dest_files=["res://.godot/imported/colored_land.png-94d11f13dc376daf4e8f3772723ef1d8.ctex"]
 
 [params]
 

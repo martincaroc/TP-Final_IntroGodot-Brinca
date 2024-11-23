@@ -1,0 +1,33 @@
+[gd_scene load_steps=8 format=3 uid="uid://5f4cyo8wq84w"]
+
+[ext_resource type="AudioStream" uid="uid://kx7a0fp0i3yd" path="res://Assets/Sounds/Alpha Dance.ogg" id="1_5p2s7"]
+[ext_resource type="AudioStream" uid="uid://wc44g0fqlnop" path="res://Assets/Sounds/jump1.ogg" id="2_ouu81"]
+[ext_resource type="AudioStream" uid="uid://c7dqieew26b4o" path="res://Assets/Sounds/coin5.ogg" id="3_3udcb"]
+[ext_resource type="AudioStream" uid="uid://qbsnaoslt1v4" path="res://Assets/Sounds/upgrade5.ogg" id="4_ffqiy"]
+[ext_resource type="AudioStream" uid="uid://dvcnc051o3rsy" path="res://Assets/Sounds/explosion2.ogg" id="5_3dter"]
+[ext_resource type="AudioStream" uid="uid://blxk3jvyd7gwa" path="res://Assets/Sounds/lose5.ogg" id="6_tfsuv"]
+[ext_resource type="AudioStream" uid="uid://cx1r625emfggt" path="res://Assets/Sounds/gameover2.ogg" id="7_dweed"]
+
+[node name="Sound" type="Node"]
+
+[node name="LevelTheme" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("1_5p2s7")
+
+[node name="Jump" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_ouu81")
+
+[node name="Coin" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_3udcb")
+
+[node name="OneUp" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_ffqiy")
+pitch_scale = 0.79
+
+[node name="EnemyKill" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_3dter")
+
+[node name="LoseLife" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_tfsuv")
+
+[node name="GameOver" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_dweed")

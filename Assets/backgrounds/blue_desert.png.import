@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dccfutft4ylml"
-path="res://.godot/imported/blue_desert.png-87911f6cc1dd941ac51b538cc35f2b5c.ctex"
+path="res://.godot/imported/blue_desert.png-32059ecc25fbb96791ab01c7be2bd7f2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/backgrounds/blue_desert.png"
-dest_files=["res://.godot/imported/blue_desert.png-87911f6cc1dd941ac51b538cc35f2b5c.ctex"]
+source_file="res://Assets/Backgrounds/blue_desert.png"
+dest_files=["res://.godot/imported/blue_desert.png-32059ecc25fbb96791ab01c7be2bd7f2.ctex"]
 
 [params]
 
