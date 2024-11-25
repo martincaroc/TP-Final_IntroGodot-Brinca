@@ -85,6 +85,10 @@ func _on_area_2d_area_entered(area):
 			last_checkpoint_position = area.position
 			area.take()
 			Sound.play("OneUp")
+	elif area.is_in_group("exit_sign"):
+		get_tree().change_scene_to_file("res://Scenes/Main/win_menu.tscn")
+		Sound.play("OneUp")
+
 
 func collide_with_enemy(enemy):
 	if position.y > enemy.position.y:

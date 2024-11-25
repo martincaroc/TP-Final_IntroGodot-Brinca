@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://tuh3pokyi7yw"]
+
+[ext_resource type="Texture2D" uid="uid://d2nsafae6n1gn" path="res://Assets/Level Objects/sign_exit.png" id="1_rh10q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bx1sd"]
+size = Vector2(130, 132)
+
+[node name="Exit Sign" type="Area2D" groups=["exit_sign"]]
+collision_layer = 2
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -64)
+texture = ExtResource("1_rh10q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -65)
+shape = SubResource("RectangleShape2D_bx1sd")

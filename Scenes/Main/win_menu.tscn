@@ -1,0 +1,71 @@
+[gd_scene load_steps=4 format=3 uid="uid://dsu7xi3276a16"]
+
+[ext_resource type="Texture2D" uid="uid://bg4a82b17t7ds" path="res://Assets/Backgrounds/colored_shroom.png" id="1_70pwn"]
+[ext_resource type="Script" path="res://Scenes/Main/win_menu.gd" id="1_atpd5"]
+[ext_resource type="Texture2D" uid="uid://b2g8wjgv88iej" path="res://Assets/Player Sprite/platformChar_happy.png" id="2_0lgfk"]
+
+[node name="WinMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_atpd5")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -78.0
+offset_top = -404.0
+offset_right = 1216.0
+offset_bottom = 890.0
+texture = ExtResource("1_70pwn")
+
+[node name="LabelWin" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0.67451, 0.760784, 0.329412, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 96
+text = "You Won!!"
+
+[node name="LabelScore" type="Label" parent="."]
+layout_mode = 0
+offset_top = 468.0
+offset_right = 882.0
+offset_bottom = 600.0
+theme_override_colors/font_color = Color(0.93443, 0.749022, 0.256768, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 60
+text = "You collected coins"
+horizontal_alignment = 1
+
+[node name="PlayerSprite" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 376.0
+offset_top = 78.0
+offset_right = 740.0
+offset_bottom = 442.0
+texture = ExtResource("2_0lgfk")
+
+[node name="PlayAgain" type="Button" parent="."]
+layout_mode = 0
+offset_left = 944.0
+offset_top = 505.0
+offset_right = 1142.0
+offset_bottom = 566.0
+theme_override_font_sizes/font_size = 35
+text = "Play Again?"
+
+[node name="Exit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 874.0
+offset_top = 581.0
+offset_right = 1145.0
+offset_bottom = 631.0
+theme_override_font_sizes/font_size = 30
+text = "Exit to Main Menu"
+
+[connection signal="pressed" from="PlayAgain" to="." method="_on_play_again_pressed"]
+[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]

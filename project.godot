@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="MyFirstPlatformer"
-run/main_scene="res://Scenes/Main/level.tscn"
+run/main_scene="res://Scenes/Main/main_menu.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[audio]
+
+buses/default_bus_layout="res://Scenes/Main/default_bus_layout.tres"
 
 [autoload]
 
@@ -29,6 +33,7 @@ window/stretch/mode="canvas_items"
 enemies=""
 projectiles=""
 checkpoints=""
+exit_sign=""
 
 [layer_names]
 
