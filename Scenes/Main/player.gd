@@ -19,6 +19,7 @@ func _physics_process(delta):
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
+		Sound.play("Jump")
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -48,10 +49,12 @@ func _physics_process(delta):
 func lose():
 	GameManager.lives -= 1
 	GameManager.lives_changed.emit()
+	Sound.play("LoseLife")
 
 	if GameManager.lives > 0:
 		position = last_checkpoint_position
 	else:
+		Sound.play("GameOver")
 		get_tree().reload_current_scene()
 		GameManager.lives = 3
 		GameManager.lives_changed.emit()
@@ -68,16 +71,20 @@ func _on_area_2d_area_entered(area):
 		#Handle coins grabbed
 		GameManager.coins += 1
 		GameManager.coins_changed.emit()
+		Sound.play("Coin")
 		area.queue_free()
 	elif area.is_in_group("one_ups"):
 		#Handle lives grabbed
 		GameManager.lives += 1
 		GameManager.coins_changed.emit()
+		Sound.play("OneUp")
 		area.queue_free()
 	elif area.is_in_group("checkpoints"):
 		#Handle checkpoints reached
-		last_checkpoint_position = area.position
-		area.take()
+		if not area.is_taken:
+			last_checkpoint_position = area.position
+			area.take()
+			Sound.play("OneUp")
 
 func collide_with_enemy(enemy):
 	if position.y > enemy.position.y:
@@ -86,6 +93,7 @@ func collide_with_enemy(enemy):
 	else:
 		#print("gane")
 		enemy.queue_free()
+		Sound.play("EnemyKill")
 		velocity.y = JUMP_VELOCITY
 
 #Player Collision with bodies
