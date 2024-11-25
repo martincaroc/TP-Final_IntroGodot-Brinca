@@ -12,31 +12,31 @@
 [node name="Sound" type="Node"]
 script = ExtResource("1_d8d0o")
 
-[node name="LevelTheme" type="AudioStreamPlayer2D" parent="."]
+[node name="LevelTheme" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("1_5p2s7")
 bus = &"Music"
 
-[node name="Jump" type="AudioStreamPlayer2D" parent="."]
+[node name="Jump" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_ouu81")
 bus = &"SFX"
 
-[node name="Coin" type="AudioStreamPlayer2D" parent="."]
+[node name="Coin" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_3udcb")
 bus = &"SFX"
 
-[node name="OneUp" type="AudioStreamPlayer2D" parent="."]
+[node name="OneUp" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_ffqiy")
 pitch_scale = 0.79
 bus = &"SFX"
 
-[node name="EnemyKill" type="AudioStreamPlayer2D" parent="."]
+[node name="EnemyKill" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_3dter")
 bus = &"SFX"
 
-[node name="LoseLife" type="AudioStreamPlayer2D" parent="."]
+[node name="LoseLife" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_tfsuv")
 bus = &"SFX"
 
-[node name="GameOver" type="AudioStreamPlayer2D" parent="."]
+[node name="GameOver" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_dweed")
 bus = &"SFX"
