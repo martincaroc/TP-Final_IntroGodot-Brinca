@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
-@export var SPEED = 300.0
-@export var JUMP_VELOCITY = -600.0
+@export var speed = 300.0
+@export var jump_velocity = -600.0
 const EnemyExplosion = preload("res://Scenes/VFX/enemy_explosion.tscn")
 
 
@@ -20,16 +20,16 @@ func _physics_process(delta):
 
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
+		velocity.y = jump_velocity
 		Sound.play("Jump")
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction = Input.get_axis("ui_left", "ui_right")
 	if direction:
-		velocity.x = direction * SPEED
+		velocity.x = direction * speed
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
+		velocity.x = move_toward(velocity.x, 0, speed)
 
 	move_and_slide()
 
@@ -100,7 +100,7 @@ func collide_with_enemy(enemy):
 		#print("gane")
 		enemy.queue_free()
 		Sound.play("EnemyKill")
-		velocity.y = JUMP_VELOCITY
+		velocity.y = jump_velocity
 		var explosion = EnemyExplosion.instantiate()
 		explosion.global_position = enemy.global_position + 30 * Vector2.UP
 		add_child(explosion)
