@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
-const SPEED = 300.0
-const JUMP_VELOCITY = -600.0
+@export var SPEED = 300.0
+@export var JUMP_VELOCITY = -600.0
 const EnemyExplosion = preload("res://Scenes/VFX/enemy_explosion.tscn")
 
 
