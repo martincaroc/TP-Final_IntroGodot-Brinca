@@ -2,6 +2,8 @@ extends CharacterBody2D
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -600.0
+const EnemyExplosion = preload("res://Scenes/VFX/enemy_explosion.tscn")
+
 
 var last_checkpoint_position = Vector2.ZERO
 
@@ -99,6 +101,9 @@ func collide_with_enemy(enemy):
 		enemy.queue_free()
 		Sound.play("EnemyKill")
 		velocity.y = JUMP_VELOCITY
+		var explosion = EnemyExplosion.instantiate()
+		explosion.global_position = enemy.global_position + 30 * Vector2.UP
+		add_child(explosion)
 
 #Player Collision with bodies
 func _on_area_2d_body_entered(body):
